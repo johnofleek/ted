@@ -1,2 +1,4 @@
 # ted
-teds crap
+teds python game
+
+
