@@ -2,12 +2,18 @@
 # Problems enabling the 3.5mm jack (on-board sound card)
 I finally managed to get it to work.
 
-Just add “dtparam=audio=on” to /boot/config.txt. It also helps to choose the default sound device for ALSA because sometimes the wrong default card is chosen. In my case the Roland UM-ONE was chosen as a default, which obviously cannot play PCM data :slight_smile:
+Just add “dtparam=audio=on” to /boot/config.txt. 
+
+It also helps to choose the default sound device for ALSA because sometimes the wrong default card is chosen. 
+
+In my case the Roland UM-ONE was chosen as a default, which obviously cannot play PCM data :slight_smile:
 
 ##Edit the ALSA config:
+```
 sudo nano /usr/share/alsa/alsa.conf
 defaults.ctl.card “ALSA”
 defaults.pcm.card “ALSA”
+```
 
 # Audio set up
 
